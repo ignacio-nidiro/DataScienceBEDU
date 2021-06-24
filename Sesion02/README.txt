@@ -1,4 +1,4 @@
-<h1>Consideraciones</h1>
+Consideraciones
 
 De igual forma como en el postwork 1,debes de cambiar tu working directory.
 
