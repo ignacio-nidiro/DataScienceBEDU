@@ -1,5 +1,4 @@
-# DataScienceBEDU
-DataScience Course PostWorks 
+# DataScience Course PostWorks 
 
 
 Análisis de la 1era División Española de Soccer.
