@@ -1,7 +1,7 @@
 library(dplyr)
 library(lubridate)
 
-setwd("C:/DataScienceBEDU/PostWorks/Sesion02")
+setwd("C:/Users/nacho/OneDrive/Documentos/GitHub/DataScienceBEDU/Sesion02/csv")
 
 ##Lee los 3 archivos .csv correspondientes a las temporadas 2017/2018, 2018/2019, 2019/2020
 ##Descargados previamente de https://www.football-data.co.uk/spainm.php
