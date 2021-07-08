@@ -1,4 +1,5 @@
 library(dplyr)
+library(lubridate)
  
 data <- read.csv("https://raw.githubusercontent.com/Forever-D14/DataScienceBEDU/main/Sesion06/match.data.csv")
 
@@ -14,6 +15,8 @@ agrupamiento <- data %>%
 golesMensuales.ts <- ts(agrupamiento$Mensual,start = c(2010,08), end = c(2019,12), frequency = 12)
 ?as.Date
 str(golesMensuales.ts)
+
+??year
 
 #PLOTEAMOS
 plot(golesMensuales.ts, 
