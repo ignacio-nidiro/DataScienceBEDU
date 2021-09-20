@@ -12,7 +12,7 @@ agrupamiento <- data %>%
           summarise(Mensual = mean(sumagoles))
 
 ##GENERAMOS LA SERIE DE TIEMPO, EMPEZANDO EN AGOSTO DE 2010 Y TERMINA EN DICIEMBRE 2019
-golesMensuales.ts <- ts(agrupamiento$Mensual,start = c(2010,08), end = c(2019,12), frequency = 12)
+golesMensuales.ts <- ts(agrupamiento$Mensual,start = c(2011,01), end = c(2019,12), frequency = 10)
 ?as.Date
 str(golesMensuales.ts)
 

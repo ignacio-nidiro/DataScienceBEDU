@@ -37,7 +37,7 @@ ui <-
                 
                 tabItems(
                     
-                    # Histograma
+                    # Graficas de Barras
                     tabItem(tabName = "Barras",
                             fluidRow(
                                 box(width = NULL, height = NULL,
@@ -49,7 +49,7 @@ ui <-
                             )
                     ),
                     
-                    # Dispersión
+                    # Graficas obtenidas en PostWork3
                     tabItem(tabName = "PW3", 
                             fluidRow(
                                 box(width = NULL, height = NULL,
@@ -61,7 +61,7 @@ ui <-
                     ),
                     
                     
-                    
+                    #Match Data en DataTable
                     tabItem(tabName = "data_table",
                             fluidRow(
                                 box(width = NULL, height = NULL,
@@ -71,6 +71,7 @@ ui <-
                             )
                     ), 
                     
+                    #Factores de Ganacia Maximos y promedios Obtenidos en momios.r
                     tabItem(tabName = "Fact",
                             fluidRow(
                                 box(width = NULL, height = NULL,
@@ -92,16 +93,15 @@ ui <-
 
 server <- function(input, output) {
     library(ggplot2)
-    setwd("C:/DataScienceBEDU/Sesion08/Postwork08")
-    data <- read.csv("data/match.data.csv")
+    
+    data <- read.csv("https://raw.githubusercontent.com/Forever-D14/DataScienceBEDU/main/Sesion08/Postwork08/data/match.data.csv")
     
     
     output$output_plot <- renderPlot({
-        ggplot(data, aes_string(x = input$variable)) +
+        ggplot(data, aes_string(x = input$variable, fill = "FTR")) +
             geom_bar() +
             facet_wrap(as.factor(data$away.team))+
-            ggtitle("Goles a favor y en contra")}, width = "auto" 
-    )
+            ggtitle("Goles a favor y en contra")}, width = "auto" ,height = 650)
     
     output$dataTable <- renderDataTable({data},options = list(aLengthMenu = c(10,20,50), iDisplayLength = 20))
     
